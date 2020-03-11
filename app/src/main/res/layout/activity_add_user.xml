@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<LinearLayout
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:minWidth="500dp"
+    android:minHeight="300dp"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <com.google.android.material.textfield.TextInputLayout
+        android:theme="@style/TextAppearence.App.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/colorPrimary">
+        <androidx.appcompat.widget.AppCompatEditText
+            android:textColor="@color/gray"
+            android:hint="@string/name"
+            android:layout_margin="5dp"
+            android:id="@+id/mUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:theme="@style/TextAppearence.App.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <androidx.appcompat.widget.AppCompatEditText
+        android:textColor="@color/gray"
+        android:hint="@string/phone"
+        android:layout_margin="5dp"
+        android:id="@+id/mUserPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:theme="@style/TextAppearence.App.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <androidx.appcompat.widget.AppCompatEditText
+        android:textColor="@color/gray"
+        android:hint="@string/email"
+        android:layout_margin="5dp"
+        android:id="@+id/mUserEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:theme="@style/TextAppearence.App.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <androidx.appcompat.widget.AppCompatEditText
+        android:textColor="@color/gray"
+        android:hint="@string/city"
+        android:layout_margin="5dp"
+        android:id="@+id/mUserCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:padding="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@color/colorPrimary"
+            android:layout_weight="0.75"
+            android:id="@+id/mButtonAdd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/add"/>
+        <View
+            android:background="@color/white"
+            android:layout_width="5dp"
+            android:layout_height="match_parent"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:padding="3dp"
+            android:background="@color/colorPrimary"
+            android:id="@+id/mButtonClose"
+            android:layout_width="0dp"
+            android:layout_weight="0.75"
+            android:layout_height="wrap_content"
+            android:text="@string/close"/>
+
+
+    </LinearLayout>
+
+</LinearLayout></layout>

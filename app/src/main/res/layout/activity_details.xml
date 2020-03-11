@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.imdb.roomdatabase.User" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/mToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:minHeight="?actionBarSize"
+                app:layout_scrollFlags="scroll|enterAlways"/>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".DetailsActivity">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:theme="@style/TextAppearence.App.TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorPrimary">
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:textColor="@color/gray"
+                    android:text="@{user.mUserName}"
+                    android:hint="@string/name"
+                    android:layout_margin="5dp"
+                    android:id="@+id/txt_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:theme="@style/TextAppearence.App.TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorPrimary">
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:textColor="@color/gray"
+                    android:hint="@string/phone"
+                    android:text="@{user.mUserPhone}"
+                    android:layout_margin="5dp"
+                    android:id="@+id/txt_userphone_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:theme="@style/TextAppearence.App.TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorPrimary">
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:textColor="@color/gray"
+                    android:text="@{user.mUserEmail}"
+                    android:hint="@string/email"
+                    android:layout_margin="5dp"
+                    android:id="@+id/mUserEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:theme="@style/TextAppearence.App.TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorPrimary">
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:textColor="@color/gray"
+                    android:text="@{user.mUserCity}"
+                    android:hint="@string/city"
+                    android:layout_margin="5dp"
+                    android:id="@+id/txt_usercity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+        <LinearLayout
+            android:padding="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@color/colorPrimary"
+                android:layout_weight="0.75"
+                android:id="@+id/button_update"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/update"/>
+            <View
+                android:background="@color/white"
+                android:layout_width="5dp"
+                android:layout_height="match_parent"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+
+
+                android:padding="3dp"
+                android:background="@color/colorPrimary"
+                android:id="@+id/button_delete"
+                android:layout_width="0dp"
+                android:layout_weight="0.75"
+                android:layout_height="wrap_content"
+                android:text="@string/delete"
+                /></LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>
